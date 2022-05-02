@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item routerLink="/register">
+      Registro
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div>
+    <h2>Iniciar sesión</h2>
+    <form (ngSubmit)="login(fLogin)" #fLogin="ngForm" class="form">
+      <ion-item>
+        <ion-input clearInput value="User" placeholder="Usuario" [(ngModel)]="loginUser.user" name="user" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input clearInput value="Contraseña" placeholder="Contraseña" [(ngModel)]="loginUser.password"  name="password" type="password" required></ion-input>
+    </ion-item>
+    <ion-button type="submit" shape="round" color="primary" class="button">
+      Acceder
+    </ion-button>
+    </form>
+  </div>
+</ion-content>

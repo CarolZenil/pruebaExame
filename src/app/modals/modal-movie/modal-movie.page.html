@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-button (click)="closeModal()" slot="end">X</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <img src="{{movie.show.image.medium}}" *ngIf="movie.show.image">
+  <h2>{{movie.show.name}}</h2>
+  <div [innerHTML]="movie.show.summary"> </div>
+
+</ion-content>

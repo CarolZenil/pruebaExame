@@ -1,0 +1,7 @@
+{
+  "name": "CarolinaDeLosSantosZenil",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,22 @@
+<ion-content>
+
+  <div>
+    <form (ngSubmit)="register(fRegister)" #fRegister="ngForm" class="form">
+      <h2>Registro</h2>
+
+      <ion-item>
+        <ion-input clearInput value="Nombre" placeholder="Nombre" [(ngModel)]="user.name" name="name" type="text" required></ion-input>
+    </ion-item>
+      <ion-item>
+        <ion-input clearInput value="User" placeholder="Usuario" [(ngModel)]="user.user" name="user" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input clearInput value="Contraseña" placeholder="Contraseña" [(ngModel)]="user.password"  name="password" type="password" required></ion-input>
+    </ion-item>
+    <ion-button type="submit" shape="round" color="primary" class="button">
+      Registrar
+    </ion-button>
+    </form>
+  </div>
+  
+</ion-content>

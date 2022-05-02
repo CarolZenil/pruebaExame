@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Películas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <!--<ion-item>
+    <input type="search" [(ngModel)]="search" (ngModelChange) ="doSometing(search)">
+    <ion-icon name="search-outline" (click)="doSearch()"></ion-icon>
+  </ion-item>-->
+  <ion-item  lines="none">
+    <input type="search" [(ngModel)]="search" class="search" (ngModelChange) ="doSearch()"/>
+    <button (click)="doSearch()" class="search-button"><ion-icon name="search-outline"></ion-icon></button>
+</ion-item> 
+<br> 
+  <ng-container *ngFor="let movie of movies; index as i">
+    <ion-item (click)="openModal(movie)" class="pointer">
+      <ion-thumbnail slot="start" *ngIf="movie.show.image">
+        <img src="{{movie.show.image.medium}}" >
+      </ion-thumbnail>
+      <ion-label>{{movie.show.name}}</ion-label>
+    </ion-item>
+</ng-container>
+</ion-content>
+
